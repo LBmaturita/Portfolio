@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PCTO 2024 - Centro Don Orione</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&amp;family=Space+Grotesk:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#474747",
+                    "on-tertiary-fixed": "#1b1b1b",
+                    "surface-container-low": "#f3f3f3",
+                    "outline": "#7e7576",
+                    "on-primary-fixed": "#1b1b1b",
+                    "tertiary-fixed-dim": "#c6c6c6",
+                    "surface-container-high": "#e8e8e8",
+                    "secondary-container": "#dddddd",
+                    "inverse-surface": "#303030",
+                    "outline-variant": "#cfc4c5",
+                    "tertiary": "#000000",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-tint": "#5e5e5e",
+                    "on-surface": "#1b1b1b",
+                    "on-error-container": "#93000a",
+                    "surface": "#f9f9f9",
+                    "on-secondary-fixed-variant": "#454747",
+                    "on-tertiary-container": "#848484",
+                    "on-primary-container": "#848484",
+                    "surface-container-highest": "#e2e2e2",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "inverse-primary": "#c6c6c6",
+                    "on-primary-fixed-variant": "#474747",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#eeeeee",
+                    "border-subtle": "#E5E5E5",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "surface-container-lowest": "#ffffff",
+                    "text-muted": "#666666",
+                    "background": "#FAFAFA",
+                    "tertiary-container": "#1b1b1b",
+                    "primary-fixed": "#e2e2e2",
+                    "on-background": "#1b1b1b",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#c6c6c6",
+                    "on-primary": "#ffffff",
+                    "primary": "#000000",
+                    "surface-variant": "#e2e2e2",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#dadada",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-tertiary": "#ffffff",
+                    "accent-electric": "#007AFF",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-secondary-container": "#606161",
+                    "secondary": "#5d5f5f",
+                    "primary-container": "#1b1b1b",
+                    "on-surface-variant": "#4c4546",
+                    "surface-bright": "#f9f9f9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "8rem",
+                    "gutter-grid": "1.5rem",
+                    "content-max-width": "1280px",
+                    "margin-safe": "4rem"
+            },
+            "fontFamily": {
+                    "h2": ["Inter"],
+                    "label-mono": ["Space Grotesk"],
+                    "body-reading": ["Inter"],
+                    "display-hero": ["Inter"],
+                    "h1": ["Inter"]
+            },
+            "fontSize": {
+                    "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-mono": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "body-reading": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "display-hero": ["96px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #FAFAFA;
+            color: #1b1b1b;
+        }
+        .swiss-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="font-body-reading antialiased">
+<!-- TopAppBar Shell -->
+<header class="bg-surface dark:bg-surface-container-lowest docked full-width top-0 border-b border-border-subtle dark:border-outline-variant z-50 sticky">
+<nav class="flex justify-between items-center w-full px-margin-safe py-4 max-w-content-max-width mx-auto">
+<div class="font-h2 text-h1 tracking-tighter text-primary dark:text-on-surface">PCTO 2024</div>
+<div class="hidden md:flex items-center gap-8"><a class="text-secondary dark:text-on-surface-variant font-label-mono hover:text-accent-electric transition-colors duration-200" href="index.html">HOME</a>
+<a class="text-primary dark:text-on-surface font-bold border-b-2 border-primary hover:text-accent-electric transition-colors duration-200" href="#">OSPEDALE</a>
+<a class="text-secondary dark:text-on-surface-variant font-label-mono hover:text-accent-electric transition-colors duration-200" href="farmacia.html">FARMACIA</a>
+<a class="text-secondary dark:text-on-surface-variant font-label-mono hover:text-accent-electric transition-colors duration-200" href="sostenibile.html">SOSTENIBILE</a>
+<a class="text-secondary dark:text-on-surface-variant font-label-mono hover:text-accent-electric transition-colors duration-200" href="#">BIO</a>
+<button class="bg-primary text-on-primary px-4 py-2 font-label-mono hover:bg-accent-electric transition-all active:scale-[0.99]">CONTATTO</button></div>
+<button class="md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="max-w-content-max-width mx-auto px-margin-safe py-12">
+<!-- Hero Section: Swiss Editorial Layout -->
+<section class="mb-section-gap">
+<div class="flex flex-col md:flex-row gap-12 border-b border-border-subtle pb-12">
+<div class="md:w-2/3">
+<span class="font-label-mono text-label-mono text-accent-electric mb-4 block uppercase">Modulo PCTO | TIROCINIO CLINICO</span>
+<h1 class="font-h1 text-h1 mb-8 uppercase">CENTRO<br/>DON ORIONE</h1>
+<p class="font-body-reading text-h2 max-w-2xl text-on-surface mb-8">
+                    Tirocinio in Fisioterapia e Riabilitazione presso il centro di Bergamo.
+                </p>
+<div class="bg-surface-container p-6 border-l-4 border-primary">
+<p class="font-label-mono text-label-mono mb-1">STUDENTE</p>
+<p class="font-body-reading font-bold">Beretta Lorenzo, Classe 3E</p>
+</div>
+</div>
+<div class="md:w-1/3 flex flex-col justify-end">
+<div class="border-t border-primary pt-4">
+<p class="font-label-mono text-label-mono mb-1">LOCALITÀ</p>
+<p class="font-body-reading font-bold mb-4">Bergamo, Centro Don Orione<br/><span class="font-normal text-sm">(via Don Luigi Orione)</span></p>
+<p class="font-label-mono text-label-mono mb-1">DURATA</p>
+<p class="font-body-reading font-bold">Gennaio - Febbraio 2024</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Focus: Bento Grid Style -->
+<section class="mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-border-subtle">
+<div class="p-8 border-r border-b border-border-subtle bg-surface">
+<span class="material-symbols-outlined text-4xl mb-6" data-icon="physical_therapy">physical_therapy</span>
+<h3 class="font-h2 text-h2 mb-4 uppercase">Riabilitazione</h3>
+<p class="font-body-reading text-secondary">Osservazione dei trattamenti fisioterapici personalizzati per il recupero funzionale.</p>
+</div>
+<div class="p-8 border-r border-b border-border-subtle bg-white">
+<span class="material-symbols-outlined text-4xl mb-6" data-icon="elderly">elderly</span>
+<h3 class="font-h2 text-h2 mb-4 uppercase">Area RSA</h3>
+<p class="font-body-reading text-secondary">Interventi mirati al mantenimento delle capacità motorie nei pazienti anziani ricoverati.</p>
+</div>
+<div class="p-8 border-b border-border-subtle bg-surface">
+<span class="material-symbols-outlined text-4xl mb-6" data-icon="anatomy">orthopedics</span>
+<h3 class="font-h2 text-h2 mb-4 uppercase">Anatomia</h3>
+<p class="font-body-reading text-secondary">Studio clinico delle patologie ortopediche, con focus sul legamento crociato.</p>
+</div>
+</div>
+</section>
+<!-- Sharp Edged Image Section -->
+<section class="mb-section-gap">
+<div class="swiss-grid">
+<div class="col-span-12 md:col-span-8">
+<img alt="Clinical physiotherapy room at Centro Don Orione" class="w-full grayscale hover:grayscale-0 transition-all duration-700 object-cover aspect-[16/9]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-kIoh7kVYHAqfoofmxrJZiFo-WFJY-c-xy6EOeARYc9nEh69ejiqO12FXnSY_CTCn1RNyE5HDKmypV5UHXaPQKtdsWY4rX1sRKQAr-8spKd4mtup4lBhWPEf1rPPlKoSnsIifP3e9LkHLt8_28O1CYzS6FGx_e4_qp0D_8doiJOb4wIYXvSFv8_mLEcqG-9cs5cluCgSG1A3kG7b0RdOH-XNMPBksAPmnC5JDEVFMuAWZmG5j1nrG3KXZOwsyQEmP2vNNuoivQsMu"/>
+</div>
+<div class="col-span-12 md:col-span-4 bg-tertiary p-8 flex flex-col justify-between">
+<p class="text-white font-label-mono text-label-mono uppercase tracking-widest">Focus Professionale</p>
+<p class="text-white font-h2 text-h2 leading-tight uppercase">CURA<br/>E MOVIMENTO<br/>TERAPEUTICO.</p>
+</div>
+</div>
+</section>
+<!-- Diario di Bordo: Editorial Text Layout -->
+<section class="mb-section-gap max-w-4xl">
+<div class="border-l-4 border-primary pl-8 py-4 mb-12">
+<span class="font-label-mono text-label-mono bg-primary text-white px-2 py-1 uppercase">Cronologia Attività | 2024</span>
+<h2 class="font-h1 text-h1 mt-4 uppercase">DIARIO DI BORDO</h2>
+</div>
+<div class="space-y-16">
+<article class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/4">
+<p class="font-label-mono text-label-mono text-text-muted">02-02-2024</p>
+<p class="font-body-reading font-bold">CHIUSURA PERCORSO</p>
+</div>
+<div class="md:w-3/4">
+<p class="font-body-reading text-on-surface leading-loose">
+                        Osservazione fisioterapia al mattino con 2 pazienti e visita in RSA (ore 11-12). Nel pomeriggio ho seguito il trattamento di 4 pazienti. Si conclude qui il percorso di tirocinio con un riepilogo delle competenze acquisite.
+                    </p>
+</div>
+</article>
+<article class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/4">
+<p class="font-label-mono text-label-mono text-text-muted">01-02-2024</p>
+<p class="font-body-reading font-bold">FOCUS ANATOMICO</p>
+</div>
+<div class="md:w-3/4">
+<p class="font-body-reading text-on-surface leading-loose">
+                        Mattinata dedicata all'osservazione di 2 pazienti e attività in RSA. Nel pomeriggio seguiti 3 pazienti (una disdetta). Sessione teorica: lezione approfondita sul legamento crociato, analizzandone l'anatomia funzionale e le dinamiche di rottura.
+                    </p>
+</div>
+</article>
+<article class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/4">
+<p class="font-label-mono text-label-mono text-text-muted">31-01-2024</p>
+<p class="font-body-reading font-bold">APPROFONDIMENTO</p>
+</div>
+<div class="md:w-3/4">
+<p class="font-body-reading text-on-surface leading-loose">
+                        Osservazione attiva e domande specifiche sulle tecniche di fisioterapia applicate. Mattina: 2 pazienti + RSA. Pomeriggio: sessione con 4 pazienti durante la quale ho potuto richiedere numerosi chiarimenti tecnici al tutor.
+                    </p>
+</div>
+</article>
+<article class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/4">
+<p class="font-label-mono text-label-mono text-text-muted">30-01-2024</p>
+<p class="font-body-reading font-bold">INTERAZIONE</p>
+</div>
+<div class="md:w-3/4">
+<p class="font-body-reading text-on-surface leading-loose">
+                        Prosegue l'osservazione costante. Mattina con 2 pazienti e reparto RSA. Nel pomeriggio focus su 4 pazienti, analizzando le diverse risposte ai trattamenti riabilitativi proposti.
+                    </p>
+</div>
+</article>
+<article class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/4">
+<p class="font-label-mono text-label-mono text-text-muted">29-01-2024</p>
+<p class="font-body-reading font-bold">AVVIO SETTIMANA</p>
+</div>
+<div class="md:w-3/4">
+<p class="font-body-reading text-on-surface leading-loose">
+                        Osservazione diretta del lavoro del fisioterapista. Mattinata: 2 pazienti e passaggio in RSA. Pomeriggio intenso con 4 pazienti, prevalentemente anziani ricoverati nella struttura, analizzando le problematiche motorie tipiche della terza età.
+                    </p>
+</div>
+</article>
+</div>
+</section>
+<!-- Relazione Finale: Modern Editorial Text Section -->
+<section class="mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 border-t-2 border-primary pt-12">
+<div class="md:col-span-4">
+<h2 class="font-h1 text-h1 uppercase leading-none">RELAZIONE<br/>FINALE</h2>
+</div>
+<div class="md:col-span-8">
+<div class="prose prose-lg max-w-none text-on-surface space-y-6">
+<p class="font-body-reading text-h2 leading-tight mb-8">
+                        L'esperienza presso il Centro Don Orione ha avuto un impatto estremamente positivo sul mio percorso formativo.
+                    </p>
+<p class="font-body-reading leading-loose">
+                        Il supporto costante di un tutor disponibile e competente ha reso l'apprendimento fluido e stimolante. Non mi sono limitato alla sola osservazione: ho avuto l'opportunità di partecipare attivamente alla creazione di schede di esercizi personalizzate per i pazienti, un'attività che ha unito la teoria anatomica alla pratica clinica.
+                    </p>
+<p class="font-body-reading leading-loose">
+                        Oltre agli aspetti tecnici, ho compreso l'importanza fondamentale della comunicazione e della collaborazione all'interno di un setting clinico. Il lavoro di squadra non è solo un valore aggiunto, ma un requisito indispensabile per garantire l'efficacia delle cure e il benessere del paziente.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Secondary Image Grid -->
+<section class="mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="border border-border-subtle p-2">
+<img alt="Physiotherapy equipment detail" class="w-full aspect-square object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATFqr5nlU6GDej66NAA18YXa27WlXy9bzXr90utR6PJyTem2YM6Co_DreToIYN24FukpOAWCQne7CTpoWJlj1_q6VbWF6XwWjb-g9Luvzddd-1KvdC0XqjzEOMCCI7JjWpae_tfdc0n67Jgn1iFTNwH5M2s73lWPcpn_Y6B5X9D1c0fg4yyK9oC-CpLCbRjd90UkiLL_-BJFTzz4UPO-6PkQmRbzFLPyO8L-4EZDQVpoXW-43RMF03cbkilV0PON5TkcB4lfKsiIv5"/>
+<div class="mt-4 px-2 pb-2">
+<span class="font-label-mono text-label-mono uppercase">Img_04 / Strumentazione</span>
+</div>
+</div>
+<div class="border border-border-subtle p-2">
+<img alt="Anatomy chart study" class="w-full aspect-square object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJZ0tDxOWBCJYeHV9Qg--TsnUtBQ5NSlHAL-_20yQyaNFzq68Y5QtrtNmEg4Ow6Ku2rVgme9zYHc_9-6Mw8C6lZpmwOijYJ-hnVK28X-euJd8yEdg7KXJq8tevKrJzXQmx0T40modbTwMYsQWG472wWKZgQ88MfPe9WNahPp35gLrBxRO1aVme1XGxIwpRltoclxk5OgP9KQHHothAHoNVXePFLPTPT-JRHnwONsp-rliwJaMK9L8AdeD_FV9HR3IBhFFCd0AAYayo"/>
+<div class="mt-4 px-2 pb-2">
+<span class="font-label-mono text-label-mono uppercase">Img_05 / Studio Clinico</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Navigation -->
+<section class="py-12 border-t border-primary">
+<div class="flex justify-between items-center">
+<a class="group" href="#">
+<span class="font-label-mono text-label-mono text-text-muted group-hover:text-accent-electric transition-colors">PRECEDENTE</span>
+<p class="font-h2 text-h2 uppercase group-hover:text-accent-electric transition-colors">FARMACIA</p>
+</a>
+<a class="text-right group" href="#">
+<span class="font-label-mono text-label-mono text-text-muted group-hover:text-accent-electric transition-colors">SUCCESSIVO</span>
+<p class="font-h2 text-h2 uppercase group-hover:text-accent-electric transition-colors">SOSTENIBILITÀ</p>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-surface dark:bg-surface-container-lowest full-width bottom-0 border-t border-border-subtle dark:border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-start gap-8 px-margin-safe py-section-gap w-full max-w-content-max-width mx-auto">
+<div class="md:w-1/3">
+<div class="font-h2 text-h2 mb-4">PCTO 2024</div>
+<p class="font-label-mono text-label-mono uppercase text-text-muted mb-4">© 2024 - GRADUATION PROJECT</p>
+<div class="mt-8 border-t border-border-subtle pt-4">
+<p class="font-label-mono text-label-mono text-primary">DATA: 03/02/2024</p>
+<p class="font-body-reading font-bold text-h2 uppercase">Beretta Lorenzo</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-8 md:gap-12 md:w-2/3 justify-end"><div class="flex flex-col gap-2">
+<a class="font-label-mono text-label-mono uppercase text-text-muted hover:text-accent-electric transition-all duration-300" href="index.html">HOME</a>
+<a class="font-label-mono text-label-mono uppercase text-text-muted hover:text-accent-electric transition-all duration-300" href="#">OSPEDALE</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-label-mono text-label-mono uppercase text-text-muted hover:text-accent-electric transition-all duration-300" href="farmacia.html">FARMACIA</a>
+<a class="font-label-mono text-label-mono uppercase text-text-muted hover:text-accent-electric transition-all duration-300" href="sostenibile.html">SOSTENIBILE</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-label-mono text-label-mono uppercase text-text-muted hover:text-accent-electric transition-all duration-300" href="#">BIO</a>
+<a class="font-label-mono text-label-mono uppercase text-text-muted hover:text-accent-electric transition-all duration-300" href="#">LINKEDIN</a>
+</div></div>
+</div>
+</footer>
+</body></html>
